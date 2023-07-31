@@ -37,7 +37,7 @@ trained_Image = directory + str(current_time.date()) + '.jpg'
 
 # face_detector='sfd' 옵션이랑 device='cpu' 옵션 추가해야 함
 # device='gpu'를 써야 더 좋은 것 같은데 쓰면 오류남
-fa = face_alignment.FaceAlignment(face_alignment.LandmarksType._2D, flip_input=False, face_detector='sfd', device='cpu')
+fa = face_alignment.FaceAlignment(face_alignment.LandmarksType.TWO_D, flip_input=False, face_detector='sfd', device='cpu')
 
 t = torch.randn(2,2) #일반 버전
 #t = torch.randn(2,2).cuda() #쿠다 버전
